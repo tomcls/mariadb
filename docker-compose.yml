@@ -25,7 +25,9 @@ services:
                 - '-p${DB_PASSWORD}'
             retries: 3
             timeout: 5s
-networks: # first, create a docker network to be able to external_links other container with their service name: docker network create -d bridge dev-network
+networks: 
+# first, create a docker network to be able to external_links other container with their service name: 
+# docker network create -d bridge dev-network
     dev-network:
         external: true
 volumes:
